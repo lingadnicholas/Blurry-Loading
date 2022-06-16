@@ -7,6 +7,7 @@ window.onload = async () => {
     for (let i = 1; i <= 100; i++) {
         await new Promise(resolve => setTimeout(resolve, 30)); 
         bg.style.filter = `blur(${scale(i, 0, 100, 30, 0)}px)`;
+        text.style.opacity = scale(i, 0, 100, 1, 0 )
         text.innerHTML = `${i}%`
     }
     text.style.display = "None";
